@@ -1,0 +1,25 @@
+<navbar-page></navbar-page>
+<table class=" table container table-bordered">
+    <thead>
+        <tr class="bg-success text-white">
+            <th>UserId</th>
+            <th>UserName</th>
+            <th>UserEmail</th>
+            <th>UserCity</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users" class="bg-danger text-white">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.city}}</td>
+            <td>
+                <button type="submit" class="btn btn-sm btn-success" (click)=clickhere(user)>Edit</button>
+                <button type="submit" class="btn btn-sm btn-primary ml-4" (click)="clickhereforview(user)">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

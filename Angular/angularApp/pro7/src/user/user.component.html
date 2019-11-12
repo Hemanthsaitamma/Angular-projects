@@ -1,0 +1,24 @@
+<div class="container w-50 border border-success mt-5 bg-primary text-white">
+    <h2 class="text-center text-white">User Form</h2>
+    <div class="form-group">
+        <label>Nmae</label>
+        <input type="text" class="form-control" [(ngModel)]="firstname"><p>value:{{firstname}}</p>
+    </div>
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" [(ngModel)]="lastname"><p>value:{{lastname}}</p>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" [(ngModel)]="email"><p>email:{{email}}</p>
+    </div>
+    <div class="form-group" >
+        <label>Phone</label>
+        <input type="text" class="form-control" [(ngModel)]="phoneno"><p>phoneno:{{phoneno}}</p>
+    </div>
+    <div class="form-group d-flex justify-content-end">
+        <button class="btn btn-success btn-sm" (click)="SaveHere()">save</button>
+        <button class="btn btn-danger btn-sm ml-5" (click)="CancelHere()">cancel</button>
+
+    </div>
+</div>

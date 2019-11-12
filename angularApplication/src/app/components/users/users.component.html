@@ -1,0 +1,64 @@
+<table class="table table-bordered container  mt-5 text-white">
+    <thead>
+        <tr class="bg-danger">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody class="bg-success">
+
+        <tr *ngFor="let user of response" id="{{user.id}}">
+            <td>
+                <a routerLink="/user_edit/:{{user.id}}" >
+                    {{user.id}}
+                </a>
+            </td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td class="text-center">
+                <button type="submit" class="btn btn-sm btn-primary " (click)="gotoEdit($event)">Edit</button>
+            </td>
+        </tr>       
+    </tbody>
+</table>
+<!--another method-->
+<table class="table table-bordered container  mt-5 text-white">
+        <thead>
+            <tr class="bg-warning">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="bg-danger">
+    
+            <tr *ngFor="let user of response" id="{{user.id}}">
+                <td>
+                    <a href="#/user_edit/:{{user.id}}" >
+                        {{user.id}}
+                    </a>
+                </td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td class="text-center">
+                    <button type="submit" class="btn btn-sm btn-success text-center" (click)="gotoEdit($event)">Edit</button>
+                </td>
+            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+        </tbody>
+    </table>

@@ -1,0 +1,23 @@
+<table class="table table-bordered table-responsive w-50 mx-automt-5">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user" id="{{user.id}}">
+            <td>
+                <a routerLink="/edit-form/:{{user.id}}">{{user.id}}</a>
+            </td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>
+                <button class="btn btn-success btn-sm" (click)="gotoEditform($event)">Edit</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

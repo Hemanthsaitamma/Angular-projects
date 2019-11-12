@@ -1,0 +1,26 @@
+<div class="container my-5 bg-secondary">
+    <div class="form-inline d-flex justify-content-end ">
+    <input type="text" placeholder="enter the text" class="ml-5 form-control mt-3" (keyup)="clickhere($event)" >
+    </div>
+
+<table class="table   table-bordered mt-3 ">
+    <thead>
+        <tr class="bg-success text-white">
+            <th>Id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>address</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of users" class="text-white">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.address.city}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
